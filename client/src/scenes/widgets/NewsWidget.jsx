@@ -13,7 +13,7 @@ const NewsWidget = () => {
     // Fetch news data from your API
     const fetchNews = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=a2fa33fed9bc43778e4f9fc5d1d08ccf');
+        const response = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey={YOUR_API_KEY}');
         const data = await response.json();
         const shuffledArticles = shuffleArray(data.articles);
         setNews(shuffledArticles.slice(0, 3)); // Update the news state with the fetched data
